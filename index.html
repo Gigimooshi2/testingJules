@@ -8,6 +8,25 @@
     </style>
 </head>
 <body>
+    <div id="hp-bar-container" style="position: absolute; top: 10px; left: 10px; width: 200px; height: 20px; background-color: #555;">
+        <div id="hp-bar" style="width: 100%; height: 100%; background-color: #00ff00;"></div>
+        <div id="hp-text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; line-height: 20px; color: white;">100/100 HP</div>
+    </div>
+    <div id="score-container" style="position: absolute; top: 40px; left: 10px; font-size: 18px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px;">
+        Score: <span id="score-value">0</span>
+    </div>
+    <div id="level-container" style="position: absolute; top: 70px; left: 10px; font-size: 18px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px;">
+        Level: <span id="level-value">1</span> (XP: <span id="xp-value">0</span>/<span id="xp-next-level-value">100</span>)
+    </div>
+    <div id="level-up-choice-container" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0,0,0,0.85); padding: 20px; border: 2px solid #fff; text-align: center; z-index: 100;">
+        <h2 style="color: #ffd700;">Level Up! Choose a Power-up:</h2>
+        <div id="power-up-options">
+            <!-- Options will be populated by JS -->
+        </div>
+    </div>
+    <div id="game-over-message" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 48px; color: red; background-color: rgba(0,0,0,0.7); padding: 20px;">
+        GAME OVER
+    </div>
     <canvas id="gameCanvas"></canvas>
     <script type="module" src="game.js"></script>
 </body>
